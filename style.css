@@ -74,6 +74,9 @@ body::before {
   gap: 2em; /* Space between links */
   border-radius: 0 0 12px 12px; /* Rounded bottom corners */
   margin-bottom: 1em;
+  position: sticky;   /* Make navbar stick to the top */
+  top: 0;             /* Stick to the very top */
+  z-index: 10;        /* Make sure it stays above other content */
 }
 
 .navbar a {
@@ -120,8 +123,8 @@ body::before {
 
 /* Style for the bio image */
 .bio-img {
-  width: 120px;           /* Make the image much smaller */
-  height: 160px;
+  width: 200px;           /* Make the image larger */
+  height: 270px;
   object-fit: cover;      /* Crop to fit the rectangle */
   border-radius: 18px;    /* Rounded corners */
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -259,4 +262,38 @@ h2 {
   min-width: 200px;
   text-align: center; /* Center the text */
   margin: 0;
+}
+
+/* Container for the random fact section with overlay image */
+#random-fact {
+  position: relative; /* Needed for overlay positioning */
+  background-color: #f6c6d8; /* Soft rose background for readability */
+  border-radius: 12px;
+  padding: 2em 1em;
+  margin: 2em auto 1.5em auto;
+  max-width: 500px;
+  overflow: hidden; /* Hide overflow from overlay image */
+  z-index: 1;
+}
+
+/* Overlay image for the random fact section */
+#random-fact .fact-overlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the section */
+  opacity: 0.25;     /* Make the image see-through for text readability */
+  z-index: 1;        /* Place image below the text */
+  pointer-events: none; /* Allow clicks through the image */
+  border-radius: 12px;
+}
+
+/* Make sure the text and button are above the overlay image */
+#random-fact h2,
+#random-fact p,
+#random-fact button {
+  position: relative;
+  z-index: 2;
 }
