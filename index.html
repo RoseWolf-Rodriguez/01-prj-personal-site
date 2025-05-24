@@ -6,6 +6,77 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Hero Section -->
+  <section id="hero">
+    <!-- This is the main introduction area -->
+    <h1>Lucretia's Personal Website</h1>
+    <p>Hello! I'm learning web development. Explore my site to follow along with me on my journey!</p>
+  </section>
+
+  <!-- Bio Section -->
+  <section id="bio">
+    <!-- A short paragraph about yourself -->
+    <h2>About Me</h2>
+    <p>
+      I am an Undergrad at ASU; passionate about building websites, challenging the norm and learning new skills. This site will grow as I learn more!
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <!-- List your current skills -->
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML/CSS/JavaScript (beginner)</li>
+      <li>Handmade Crafts/Art</li>
+      <li>Creative Writing</li>
+    </ul>
+  </section>
+
+  <!-- Passions Section -->
+  <section id="passions">
+    <!-- Share your interests or hobbies -->
+    <h2>Lucretia's Passions</h2>
+    <p>
+     Lucretia is a passionate woman with a love for humans and efficient communication, despite differences. Always eager to learn new technologies and solve challenging problems. With a major in Anthropology, Lucretia has the ability to see different perepectives, find answers for herself, and question what is considered normal.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <!-- This is where you will showcase your projects -->
+    <h2>My Projects</h2>
+    <ul>
+      <li>Project 1 (coming soon)</li>
+      <li>Project 2 (coming soon)</li>
+    </ul>
+  </section>
+
+  <!-- Random Fact Generator Section -->
+  <section id="random-fact">
+    <!-- This area will be interactive in the future -->
+    <h2>Random Archaeological Fact Generator</h2>
+    <p id="fact">Click the button to see a random fact!</p>
+    <button onclick="showRandomFact()">Show Random Fact</button>
+  </section>
+
+  <!-- Simple JavaScript for the Random Fact Generator -->
+  <script>
+    // This function shows a random fact when the button is clicked
+    function showRandomFact() {
+      // List of facts
+      var facts = [
+        "Honey never spoils.",
+        "Bananas are berries, but strawberries are not.",
+        "A group of flamingos is called a 'flamboyance'.",
+        "Octopuses have three hearts.",
+        "The Eiffel Tower can be 15 cm taller during hot days."
+      ];
+      // Pick a random fact
+      var randomIndex = Math.floor(Math.random() * facts.length);
+      // Show the fact in the paragraph
+      document.getElementById('fact').textContent = facts[randomIndex];
+    }
+  </script>
 </body>
 </html>
