@@ -53,7 +53,7 @@ body::before {
 #hero {
   background-color: #f6c6d8; /* Soft rose pink */
   color: #7a3b53;           /* Deep rose text for elegance */
-  padding: 2em 0;           /* Add space above and below */
+  padding: 0.5em 0 2em 0;   /* More space at the bottom */
   border-radius: 12px;      /* Rounded corners for a soft look */
   margin-bottom: 1.5em;     /* Space below the hero section */
 }
