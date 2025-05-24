@@ -20,6 +20,51 @@
     <p>
       I am an Undergrad at ASU; passionate about building websites, challenging the norm and learning new skills. This site will grow as I learn more!
     </p>
+    <!-- Clickable image cards for facts -->
+    <div id="bio-cards">
+      <!-- Each card has a front (image) and back (fact) -->
+      <div class="bio-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/pizza.png" alt="Pizza" class="bio-card-img">
+          </div>
+          <div class="card-back">
+            I love pizza and could eat it every week!
+          </div>
+        </div>
+      </div>
+      <div class="bio-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/cat.png" alt="Cat" class="bio-card-img">
+          </div>
+          <div class="card-back">
+            Cats are my favorite animal. I have several at home.
+          </div>
+        </div>
+      </div>
+      <div class="bio-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/paint.png" alt="Paint Palette" class="bio-card-img">
+          </div>
+          <div class="card-back">
+            I enjoy painting and making handmade crafts.
+          </div>
+        </div>
+      </div>
+      <div class="bio-card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/forest.png" alt="Forest" class="bio-card-img">
+          </div>
+          <div class="card-back">
+            I love spending time in nature, especially in forests.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of bio cards -->
   </section>
 
   <!-- Skills Section -->
@@ -85,6 +130,24 @@
       var randomIndex = Math.floor(Math.random() * facts.length);
       // Show the fact in the paragraph
       document.getElementById('fact').textContent = facts[randomIndex];
+    }
+
+    // Flip the card to show the fact
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+
+    // Facts for the bio section icons
+    var bioFacts = [
+      "Pesto/Alfredo Cheese Tortillini!",
+      "My favorite animal is a wolf.",
+      "Traditional art.",
+      "Evergreen forests."
+    ];
+
+    // Show the selected fact in the bio section
+    function showBioFact(index) {
+      document.getElementById('bio-fact').textContent = bioFacts[index];
     }
   </script>
 </body>
