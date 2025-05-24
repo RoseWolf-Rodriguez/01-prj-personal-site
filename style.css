@@ -297,3 +297,37 @@ h2 {
   position: relative;
   z-index: 2;
 }
+
+/* Container for the project image and overlay text */
+.project-img-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+
+/* Style for the project image */
+.project-img {
+  width: 340px;      /* Make the image larger */
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: block;
+}
+
+/* Overlay text on the project image */
+.project-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(168, 123, 157, 0.85); /* Deep purple, semi-transparent */
+  padding: 0.5em 1.2em;
+  border-radius: 8px;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 6px #000;
+  pointer-events: none; /* Let clicks go to the image if needed */
+}
