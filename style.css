@@ -219,10 +219,10 @@ h2 {
   margin-top: 0.5em;
 }
 
-/* Make sure passions text doesn't stretch too wide */
+/* Make sure passions text doesn't stretch too wide and center the text */
 .passions-text {
   max-width: 400px;
   min-width: 200px;
-  text-align: left;
+  text-align: center; /* Center the text */
   margin: 0;
 }
