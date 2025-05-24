@@ -9,10 +9,26 @@ html, body {
 /* Center all text on the page */
 body {
   text-align: center;
-  background-image: url('img/whiteredflowers.jpeg'); /* Add the image */
-  background-size: cover;      /* Make the image cover the whole page */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;/* Prevent the image from repeating */
+  /* Set up a relative position for overlay */
+  position: relative;
+  min-height: 100vh; /* Make sure overlay covers the whole page */
+}
+
+/* Add a semi-transparent overlay for the background image */
+body::before {
+  content: "";
+  position: fixed; /* Cover the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/whiteredflowers.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* Lower value = more transparent, higher = more visible */
+  z-index: -1;  /* Put the image behind everything */
+  pointer-events: none; /* Allow clicks through the overlay */
 }
 
 /* Style for the main heading in the hero section */
@@ -143,4 +159,13 @@ body {
 .skill-card.show-skill-back .skill-card-back {
   opacity: 1;
   visibility: visible;
+}
+
+/* Make all h2 headings larger and more readable */
+h2 {
+  font-size: 2em;           /* Make the heading bigger */
+  color: #a87b9d;           /* Deep purple for good contrast */
+  margin-bottom: 0.7em;     /* Add some space below */
+  font-weight: bold;        /* Make the heading bold */
+  letter-spacing: 1px;      /* Add a little spacing between letters */
 }
