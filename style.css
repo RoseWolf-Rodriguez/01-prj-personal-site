@@ -58,6 +58,33 @@ body::before {
   margin-bottom: 1.5em;     /* Space below the hero section */
 }
 
+/* Simple navigation bar styles */
+.navbar {
+  background-color: #a87b9d; /* Deep purple for contrast */
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em; /* Space between links */
+  border-radius: 0 0 12px 12px; /* Rounded bottom corners */
+  margin-bottom: 1em;
+}
+
+.navbar a {
+  color: #fff;                /* White text */
+  text-decoration: none;      /* Remove underline */
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.3em 0.8em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background: #f6c6d8;        /* Light rose on hover */
+  color: #7a3b53;             /* Deep rose text */
+}
+
 /* Style for the clickable icons in the bio section */
 #bio-icons {
   margin: 1em 0;
