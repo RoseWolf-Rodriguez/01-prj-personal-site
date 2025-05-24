@@ -42,6 +42,13 @@ body::before {
   margin-bottom: 0.5em;
 }
 
+/* Center the paragraph in the hero section */
+#hero p {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 /* Remove bullets from the skills and projects lists */
 #skills ul,
 #projects ul {
