@@ -354,3 +354,17 @@ h2 {
   color: #fff;
   transform: scale(1.07);
 }
+
+/* Style for flower icons */
+.flower-icon {
+  font-size: 1.3em;
+  vertical-align: middle;
+  margin: 0 0.15em;
+  /* Add a little shadow for visibility */
+  text-shadow: 1px 1px 2px #fff, 0 0 2px #f6c6d8;
+}
+
+/* Row of flowers for decoration */
+.flower-row {
+  margin-bottom: 0.3em;
+}

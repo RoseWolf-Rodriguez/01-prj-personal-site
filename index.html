@@ -9,16 +9,24 @@
   <!-- Navigation Bar -->
   <nav class="navbar">
     <!-- Simple navigation links to each section -->
+    <span class="flower-icon">🌸</span>
     <a href="#hero">Home</a>
     <a href="#bio">About Me</a>
     <a href="#skills">Skills</a>
     <a href="#passions">Passions</a>
     <a href="#projects">Projects</a>
+    <a href="#special-interests">Special Interests</a>
     <a href="#random-fact">Random MeFacts</a>
+    <span class="flower-icon">🌷</span>
   </nav>
   <!-- Hero Section -->
   <section id="hero">
-    <!-- This is the main introduction area -->
+    <!-- Add a flower icon above the heading -->
+    <div class="flower-row">
+      <span class="flower-icon">🌼</span>
+      <span class="flower-icon">🌸</span>
+      <span class="flower-icon">🌺</span>
+    </div>
     <h1>Lucretia's First Personal Website</h1>
     <p>Greetings! My name is Lucretia. <br>
       I was invited to join the Global Career Accelerator Program for the Summer of 2025! <br>
@@ -33,7 +41,7 @@
     <div class="bio-flex">
       <img src="img/myself.JPG" alt="Lucretia" class="bio-img">
       <div class="bio-text">
-        <h2>About Me</h2>
+        <h2>About Me <span class="flower-icon">🌻</span></h2>
         <p>
           Thanks for visiting my first personal website! I am so excited to share a little bit about who I am with the world! I love reading, drawing, and Theology. I have a love for Archaeology, which is what I am studying as an Undergrad at Arizona State University. I am passionate about my family, creative writing, building websites, challenging the norm and learning new skills. This site will grow as I learn more! 
         </p>
@@ -45,45 +53,41 @@
   <!-- Skills Section -->
   <section id="skills">
     <!-- Replace the list with clickable skill cards -->
-    <h2>My Skills</h2>
+    <h2>My Skills <span class="flower-icon">🌷</span></h2>
     <div id="skills-cards">
       <!-- Card 1 -->
       <div class="skill-card" onclick="toggleSkillCard(this)">
         <div class="skill-card-front">
-          Web Development
+          Web Development <span class="flower-icon">🌸</span>
         </div>
         <div class="skill-card-back">
-          <!-- You can add more info about Web Development here -->
           I am learning to build websites using HTML, CSS and JavaScript.
         </div>
       </div>
       <!-- Card 2 -->
       <div class="skill-card" onclick="toggleSkillCard(this)">
         <div class="skill-card-front">
-          Arts and Crafts
+          Arts and Crafts <span class="flower-icon">🌼</span>
         </div>
         <div class="skill-card-back">
-          <!-- You can add more info about Arts and Crafts here -->
           I enjoy making handmade art and creative projects.
         </div>
       </div>
       <!-- Card 3 -->
       <div class="skill-card" onclick="toggleSkillCard(this)">
         <div class="skill-card-front">
-          Archaeology
+          Archaeology <span class="flower-icon">🌻</span>
         </div>
         <div class="skill-card-back">
-          <!-- You can add more info about Archaeology here -->
           I am interested in ancient cultures and their stories.
         </div>
       </div>
       <!-- Card 4 -->
       <div class="skill-card" onclick="toggleSkillCard(this)">
         <div class="skill-card-front">
-          Creative Writing
+          Creative Writing <span class="flower-icon">🌺</span>
         </div>
         <div class="skill-card-back">
-          <!-- You can add more info about Creative Writing here -->
           I love writing stories and expressing ideas through words, as well as poetry.
         </div>
       </div>
@@ -95,7 +99,7 @@
     <!-- Share your interests or hobbies -->
     <div class="passions-flex">
       <div class="passions-text">
-        <h2>Lucretia's Passions</h2>
+        <h2>Lucretia's Passions <span class="flower-icon">🌸</span></h2>
         <p>
          Lucretia is a passionate woman with a love for animals and humans alike. She believes efficient communication is important, despite differences. Always eager to learn new technologies and solve challenging problems, Lucretia can always find a new angle of looking at things. With a major in Anthropology, Lucretia has the ability to see different perepectives, find answers for herself, and question what is considered normal. Follow her journey as she explores the world of web development, as well as her other passions!
         </p>
@@ -107,11 +111,24 @@
   <!-- Projects Section -->
   <section id="projects">
     <!-- This is where you will showcase your projects -->
-    <h2>My Projects</h2>
+    <h2>My Projects <span class="flower-icon">🌼</span></h2>
     <div class="project-img-container">
       <img src="img/notebook.jpg" alt="Notebook Project" class="project-img">
       <span class="project-overlay-text">Coming Soon</span>
     </div>
+  </section>
+
+  <!-- Special Interests Section -->
+  <section id="special-interests">
+    <h2>Special Interests <span class="flower-icon">🌼</span></h2>
+    <p>
+      Here are a few things that make me extra curious and excited to learn more:<br><br>
+      <span class="flower-icon">🌸</span> ancient civilizations and their mysteries<br>
+      <span class="flower-icon">🌷</span> mythology and folklore from around the world<br>
+      <span class="flower-icon">🌻</span> macabre/esoteric literature<br>
+      <span class="flower-icon">🌺</span> exploring new cultures and languages<br>
+      <span class="flower-icon">🌼</span> the intersection of art, science, and technology
+    </p>
   </section>
 
   <!-- Random Fact Generator Section -->
@@ -120,7 +137,7 @@
     <img src="img/wolves2.jpg" alt="Wolves" class="fact-overlay-img">
     <!-- This area will be interactive in the future -->
     <!-- Random Fact Generator heading with darker text -->
-    <h2 style="color: #48215d;">Random Fact Generator</h2>
+    <h2 style="color: #48215d;">Random Fact Generator <span class="flower-icon">🌺</span></h2>
     <p id="fact">Click the button to see a random fact!</p>
     <button onclick="showRandomFact()">Show Random Fact</button>
   </section>
