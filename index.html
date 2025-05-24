@@ -20,65 +20,55 @@
     <p>
       I am an Undergrad at ASU; passionate about building websites, challenging the norm and learning new skills. This site will grow as I learn more!
     </p>
-    <!-- Clickable image cards for facts -->
-    <div id="bio-cards">
-      <!-- Each card has a front (image) and back (fact) -->
-      <div class="bio-card" onclick="flipCard(this)">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/pizza.png" alt="Pizza" class="bio-card-img">
-          </div>
-          <div class="card-back">
-            Pesto/Alfredo Cheese Tortillini!
-          </div>
-        </div>
-      </div>
-      <div class="bio-card" onclick="flipCard(this)">
-        <div class="card-inner">
-          <div class="card-front">
-            <!-- Wolves image fills the card, cropped if needed -->
-            <img src="img/wolves.jpg" alt="Wolves" class="bio-card-img fill-card-img">
-            <!-- Add readable text over the image -->
-            <span class="card-front-label">My Favorite Animal</span>
-          </div>
-          <div class="card-back">
-            My favorite animal is a wolf.
-          </div>
-        </div>
-      </div>
-      <div class="bio-card" onclick="flipCard(this)">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/paint.png" alt="Paint Palette" class="bio-card-img">
-          </div>
-          <div class="card-back">
-            Traditional art.
-          </div>
-        </div>
-      </div>
-      <div class="bio-card" onclick="flipCard(this)">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="img/forest.png" alt="Forest" class="bio-card-img">
-          </div>
-          <div class="card-back">
-            Evergreen forests.
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End of bio cards -->
+    <!-- You can add new interactive content here later -->
   </section>
 
   <!-- Skills Section -->
   <section id="skills">
-    <!-- List your current skills -->
+    <!-- Replace the list with clickable skill cards -->
     <h2>My Skills</h2>
-    <ul>
-      <li>HTML/CSS/JavaScript (beginner)</li>
-      <li>Handmade Crafts/Art</li>
-      <li>Creative Writing</li>
-    </ul>
+    <div id="skills-cards">
+      <!-- Card 1 -->
+      <div class="skill-card" onclick="toggleSkillCard(this)">
+        <div class="skill-card-front">
+          Web Development
+        </div>
+        <div class="skill-card-back">
+          <!-- You can add more info about Web Development here -->
+          I am learning to build websites using HTML, CSS and JavaScript.
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="skill-card" onclick="toggleSkillCard(this)">
+        <div class="skill-card-front">
+          Arts and Crafts
+        </div>
+        <div class="skill-card-back">
+          <!-- You can add more info about Arts and Crafts here -->
+          I enjoy making handmade art and creative projects.
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="skill-card" onclick="toggleSkillCard(this)">
+        <div class="skill-card-front">
+          Archaeology
+        </div>
+        <div class="skill-card-back">
+          <!-- You can add more info about Archaeology here -->
+          I am interested in ancient cultures and their stories.
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="skill-card" onclick="toggleSkillCard(this)">
+        <div class="skill-card-front">
+          Creative Writing
+        </div>
+        <div class="skill-card-back">
+          <!-- You can add more info about Creative Writing here -->
+          I love writing stories and expressing ideas through words, as well as poetry.
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Passions Section -->
@@ -135,22 +125,9 @@
       document.getElementById('fact').textContent = facts[randomIndex];
     }
 
-    // Flip the card to show the fact
-    function flipCard(card) {
-      card.classList.toggle('flipped');
-    }
-
-    // Facts for the bio section icons
-    var bioFacts = [
-      "Pesto/Alfredo Cheese Tortillini!",
-      "My favorite animal is a wolf.",
-      "Traditional art.",
-      "Evergreen forests."
-    ];
-
-    // Show the selected fact in the bio section
-    function showBioFact(index) {
-      document.getElementById('bio-fact').textContent = bioFacts[index];
+    // Toggle the skill card to show the back or front
+    function toggleSkillCard(card) {
+      card.classList.toggle('show-skill-back');
     }
   </script>
 </body>

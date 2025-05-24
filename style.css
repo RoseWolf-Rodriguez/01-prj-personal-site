@@ -58,95 +58,89 @@ body {
   transform: scale(1.2);  /* Make icon bigger when hovered */
 }
 
-/* Layout for the bio cards */
-#bio-cards {
+/* Layout for the skills cards */
+#skills-cards {
   display: flex;
   justify-content: center;
-  gap: 2em; /* More space between cards */
-  margin: 2em 0; /* More space above and below */
+  gap: 2em; /* Space between cards */
+  margin: 2em 0;
   flex-wrap: wrap; /* Allow cards to wrap on small screens */
 }
 
-/* Each card container */
-.bio-card {
-  width: 150px;   /* Make the card wider */
-  height: 200px;  /* Make the card taller */
-  perspective: 600px; /* Needed for 3D flip effect */
-  display: inline-block;
-}
-
-/* Inner part that flips */
-.card-inner {
+/* Each skill card */
+.skill-card {
+  width: 150px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
+  cursor: pointer;
+  perspective: none; /* No 3D effect needed */
 }
 
-/* Flip the card when .flipped is added */
-.bio-card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Front and back of the card */
-.card-front, .card-back {
+/* Front and back of the skill card */
+.skill-card-front,
+.skill-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Show the image on the front */
-.card-front {
-  background: #fff;
-}
-
-/* Style for the card image */
-.bio-card-img {
-  width: 100px;   /* Make the image larger */
-  height: 100px;
-  object-fit: contain;
-}
-
-/* Make the wolves image fill the card and crop if necessary */
-.fill-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Crop to fill the card */
-  border-radius: 10px;
-}
-
-/* Show the fact on the back */
-.card-back {
-  background: #b39ddb; /* Light lavender for the back */
-  color: #333;
-  transform: rotateY(180deg);
-  font-size: 0.95em;
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 1em;
+  transition: opacity 0.4s;
   text-align: center;
+  color: #fff; /* White text for better contrast */
 }
 
-/* Style for text label on the front of the wolves card */
-.card-front-label {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  color: #fff;                /* White text for readability */
-  background: rgba(0,0,0,0.5);/* Semi-transparent background */
-  font-size: 1em;
-  padding: 4px 0;
-  border-radius: 0 0 10px 10px;
-  text-align: center;
-  pointer-events: none;       /* Let clicks pass through to the card */
+/* Different background colors for each card (front and back) */
+.skill-card:nth-child(1) .skill-card-front,
+.skill-card:nth-child(1) .skill-card-back {
+  background: #f6c6d8; /* Soft rose pink */
+}
+
+.skill-card:nth-child(2) .skill-card-front,
+.skill-card:nth-child(2) .skill-card-back {
+  background: #e1bee7; /* Light purple */
+}
+
+.skill-card:nth-child(3) .skill-card-front,
+.skill-card:nth-child(3) .skill-card-back {
+  background: #f8bbd0; /* Light pink */
+}
+
+.skill-card:nth-child(4) .skill-card-front,
+.skill-card:nth-child(4) .skill-card-back {
+  background: #ce93d8; /* Medium purple */
+}
+
+/* Show only the front by default */
+.skill-card-front {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Hide the back by default */
+.skill-card-back {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  font-weight: normal;
+}
+
+/* When .show-skill-back is added, show the back and hide the front */
+.skill-card.show-skill-back .skill-card-front {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.skill-card.show-skill-back .skill-card-back {
+  opacity: 1;
+  visibility: visible;
 }
