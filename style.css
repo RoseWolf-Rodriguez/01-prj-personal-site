@@ -331,3 +331,26 @@ h2 {
   text-shadow: 1px 1px 6px #000;
   pointer-events: none; /* Let clicks go to the image if needed */
 }
+
+/* Make the Random Fact Generator button more cute and colorful */
+#random-fact button {
+  background: linear-gradient(90deg, #ffb6d5 0%, #b39ddb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  padding: 0.7em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(168,123,157,0.15);
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s, transform 0.2s;
+  outline: none;
+}
+
+#random-fact button:hover,
+#random-fact button:focus {
+  background: linear-gradient(90deg, #f06292 0%, #9575cd 100%);
+  color: #fff;
+  transform: scale(1.07);
+}
