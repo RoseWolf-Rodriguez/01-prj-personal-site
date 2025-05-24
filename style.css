@@ -1,1 +1,30 @@
-/* Add you CSS here */
+/* Import an elegant font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Use the elegant font for the whole page, including the browser tab title */
+html, body {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Center all text on the page */
+body {
+  text-align: center;
+}
+
+/* Style for the main heading in the hero section */
+#hero h1 {
+  /* Use the elegant Playfair Display font */
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  /* You can adjust the size if you want */
+  font-size: 2.5em;
+  /* Add a little spacing below the heading */
+  margin-bottom: 0.5em;
+}
+
+/* Remove bullets from the skills and projects lists */
+#skills ul,
+#projects ul {
+  list-style-type: none; /* Removes the bullets */
+  padding-left: 0;       /* Removes the default left padding */
+}
