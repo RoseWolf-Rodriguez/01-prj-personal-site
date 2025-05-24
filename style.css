@@ -197,3 +197,32 @@ h2 {
   font-weight: bold;        /* Make the heading bold */
   letter-spacing: 1px;      /* Add a little spacing between letters */
 }
+
+/* Flex layout for the passions section to place text and image side by side */
+.passions-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2em; /* Space between text and image */
+  flex-wrap: wrap; /* Stack on small screens */
+  margin-bottom: 2em;
+}
+
+/* Style for the passions image */
+.passions-img {
+  width: 200px;           /* Make the image a vertical rectangle */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: block;
+  margin-top: 0.5em;
+}
+
+/* Make sure passions text doesn't stretch too wide */
+.passions-text {
+  max-width: 400px;
+  min-width: 200px;
+  text-align: left;
+  margin: 0;
+}
