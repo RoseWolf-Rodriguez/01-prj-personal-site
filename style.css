@@ -74,6 +74,34 @@ body::before {
   transform: scale(1.2);  /* Make icon bigger when hovered */
 }
 
+/* Flex layout for the bio section to place image and text side by side */
+.bio-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em; /* Space between image and text */
+  flex-wrap: wrap; /* Stack on small screens */
+  margin-bottom: 2em;
+}
+
+/* Style for the bio image */
+.bio-img {
+  width: 120px;           /* Make the image much smaller */
+  height: 160px;
+  object-fit: cover;      /* Crop to fit the rectangle */
+  border-radius: 18px;    /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: block;
+}
+
+/* Make sure bio text stays readable and doesn't stretch too wide */
+.bio-text {
+  max-width: 350px;
+  min-width: 200px;
+  text-align: left;
+  margin: 0;
+}
+
 /* Layout for the skills cards */
 #skills-cards {
   display: flex;
